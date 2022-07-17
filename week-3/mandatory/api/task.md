@@ -115,7 +115,8 @@ app.post('/products/:supplierId', (req,res)=>{
 - Add a new DELETE endpoint `/customers/:customerId` to delete an existing customer only if this customer doesn't have orders.
 
 - Add a new GET endpoint `/customers/:customerId/orders` to load all the orders along the items in the orders of a specific customer. Especially, the following information should be returned: order references, order dates, product names, unit prices, suppliers and quantities.
-- app.get("/customers/:customerId/orders", (req, res) => {
+```
+ app.get("/customers/:customerId/orders", (req, res) => {
     let customerId = req.params.customerId;
     const getCustomerOrders = "select o.order_reference, o.order_date, p.product_name, p.unit_price, s.supplier_name " +
         "from orders o join order_items oi on o.id = oi.order_id " +
@@ -131,4 +132,5 @@ app.post('/products/:supplierId', (req,res)=>{
 
 app.listen(port, function(){
     console.log('server is listening on 30001 ')
-});
+}); 
+```
