@@ -45,13 +45,14 @@ app.get("/products", (req, res) => {
 ,,,
 
 - Add a new GET endpoint `/customers/:customerId` to load a single customer by ID.
-- app.get('/customers/:customerId', (req,res)=>{
+,,,
+app.get('/customers/:customerId', (req,res)=>{
       const customerId = req.params.customerId;
       const customerById = 'select * from customers where id = $1';
       pool.query(customerById,[customerId])
       .then((result)=> res.json(result.rows))
       .catch((error) =>console.log('there is error ' + error))
-
+,,,
 - Add a new POST endpoint `/customers` to create a new customer.
 
 app.post('/customers', (req,res)=>{
