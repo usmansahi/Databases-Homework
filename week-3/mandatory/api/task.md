@@ -13,7 +13,9 @@ In the following homework, you will create new API endpoints in the NodeJS appli
 - If you don't have it already, add a new GET endpoint `/products` to load all the product names along with their supplier names.
 
 - Update the previous GET endpoint `/products` to filter the list of products by name using a query parameter, for example `/products?name=Cup`. This endpoint should still work even if you don't use the `name` query parameter!
-- app.get("/products", (req, res) => {
+- 
+,,,
+app.get("/products", (req, res) => {
     const newproduct = req.query.productname
   
     const allProducts =
@@ -37,6 +39,7 @@ In the following homework, you will create new API endpoints in the NodeJS appli
             })
     }
   });
+,,,
 
 - Add a new GET endpoint `/customers/:customerId` to load a single customer by ID.
 - app.get('/customers/:customerId', (req,res)=>{
